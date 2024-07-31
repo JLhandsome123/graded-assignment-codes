@@ -68,8 +68,8 @@
       
       <script>
         const urlParams = new URLSearchParams(window.location.search);
-        const balance = parseInt(urlParams.get('balance'));
-        const topupAmount = parseInt(urlParams.get('topupAmount'));
+        const topupAmount = urlParams.get('topupAmount');
+        const balance = urlParams.get('balance');
       
         document.getElementById('topup-amount').textContent = `$${topupAmount}`;
         document.getElementById('balance').textContent = `$${balance}`;

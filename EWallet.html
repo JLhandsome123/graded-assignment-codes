@@ -73,7 +73,8 @@
             <script>
               const urlParams = new URLSearchParams(window.location.search);
               const balance = parseInt(urlParams.get('balance'));
-              document.getElementById('balance').textContent = `$${balance}`;
+              const balanceElement = document.getElementById('balance');
+              balanceElement.textContent = `$${balance}`;
             </script>
         </div>
       </div>
