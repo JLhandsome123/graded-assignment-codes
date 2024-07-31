@@ -63,13 +63,20 @@
             <b>Enter Card Number:</b><input class="form-control" type="text" aria-label="default" style="width: 300px;" required>
             <b>CVC:</b><input class="form-control" type="text" aria-label="default" style="width: 300px;" required>
             <b>Valid thru:</b><input class="form-control" type="text" aria-label="default" style="width: 300px;" required>
+            
             <div class="Topup">
-            <b>Top up Amount:</b><input class="form-control" type="text" aria-label="default" style="width: 300px;">
+              <b>Top up Amount:</b><input class="form-control" type="text" aria-label="default" style="width: 300px;" id="topup-amount">
             </div>
-            <br>
-            <a class="btn btn-success w-100" href="Topupsuccess.html" role="button" style="width: 300px;"><b>TOP UP</b></a>
-            </div>
-        </div>
+            
+            <a class="btn btn-success w-100" href="Topupsuccess.html" role="button" style="width: 300px;" onclick="saveTopupAmount()"><b>TOP UP</b></a>
+            
+            <script>
+              function saveTopupAmount() {
+                const topupAmount = document.getElementById('topup-amount').value;
+                const newBalance = 93 + parseInt(topupAmount);
+                window.location.href = `Topupsuccess.html?balance=${newBalance}&topupAmount=${topupAmount}`;
+              }
+            </script>
     </div>
         
         </body>

@@ -61,10 +61,19 @@
       </div>
       <div class="row" style="padding-top: 20px;">
         <div class="col-md-6 offset-md-3 text-center">
-          <p style="font-size: 30px;"><b>Top up amount:</b> $50</p>
-          <p style="font-size: 30px;"><b>Balance:</b> $143</p>
+          <p style="font-size: 30px;"><b>Top up amount:</b> <span id="topup-amount"></span></p>
+          <p style="font-size: 30px;"><b>Balance:</b> <span id="balance"></span></p>
         </div>
       </div>
+      
+      <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const balance = parseInt(urlParams.get('balance'));
+        const topupAmount = parseInt(urlParams.get('topupAmount'));
+      
+        document.getElementById('topup-amount').textContent = `$${topupAmount}`;
+        document.getElementById('balance').textContent = `$${balance}`;
+      </script>
     </div>
   </body>
 </html>
