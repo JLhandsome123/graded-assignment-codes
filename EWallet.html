@@ -66,9 +66,17 @@
               <a class="MASTER" href="Master.html" role="button" style="width: 100px; height: 50px;"><img src="Images/mastercard.jpg" alt="MASTER" style="height: 70px;"></a>
             </div>
             <br>
-          <div style="font-size: xx-large; padding-left: 65px;">
-            <p><b>Wallet Balance:</b> $93</p>
+            <div class="row" style="padding-top: 20px;">
+              <div class="col-md-6 offset-md-3 text-center">
+                <p id="balance-display" style="font-size: 30px;"><b>Balance:</b> $<span id="balance"></span></p>
+              </div>
+            </div>
           </div>
+      
+          <script>
+            const balance = 93 + parseInt(topupAmount);
+            document.getElementById('balance').innerHTML = balance;
+          </script>
         </div>
       </div>
       
