@@ -61,11 +61,18 @@
       </div>
       <div class="row" style="padding-top: 20px;">
         <div class="col-md-6 offset-md-3 text-center">
-          <p style="font-size: 30px;"><b>Top up amount:</b> $50</p>
-          <p style="font-size: 30px;"><b>Balance:</b> $143</p>
+          <p id="topup-amount-display" style="font-size: 30px;"><b>Top up amount:</b> $<span id="topup-amount"></span></p>
+          <p id="balance-display" style="font-size: 30px;"><b>Balance:</b> $<span id="balance"></span></p>
         </div>
       </div>
     </div>
+
+    <script>
+      const topupAmount = localStorage.getItem('topupAmount');
+      const balance = 93 + parseInt(topupAmount);
+
+      document.getElementById('topup-amount').innerHTML = topupAmount;
+      document.getElementById('balance').innerHTML = balance;
+    </script>
   </body>
 </html>
-

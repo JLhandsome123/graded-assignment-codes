@@ -62,12 +62,21 @@
             <b>Enter Card Number:</b><input class="form-control" type="text" aria-label="default" style="width: 300px;" required>
             <b>CVC:</b><input class="form-control" type="text" aria-label="default" style="width: 300px;" required>
             <b>Valid thru:</b><input class="form-control" type="text" aria-label="default" style="width: 300px;" required>
-            <b>Top up Amount:</b><input class="form-control" type="text" aria-label="default" style="width: 300px;" required>
+            <b>Top up Amount:</b><input id="topup-amount" class="form-control" type="number" aria-label="default" style="width: 300px;" required>
             <br>
-            <a class="btn btn-success w-100" href="Topupsuccess.html" role="button" style="width: 300px;"><b>TOP UP</b></a>
+            <a id="topup-btn" class="btn btn-success w-100" href="Topupsuccess.html" role="button" style="width: 300px;"><b>TOP UP</b></a>
             </div>
         </div>
     </div>
         
+        <script>
+          const topupAmountInput = document.getElementById('topup-amount');
+          const topupBtn = document.getElementById('topup-btn');
+
+          topupBtn.addEventListener('click', () => {
+            const topupAmount = topupAmountInput.value;
+            localStorage.setItem('topupAmount', topupAmount);
+          });
+        </script>
         </body>
         </html>
