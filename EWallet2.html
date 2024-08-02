@@ -9,11 +9,10 @@
 
     <style>
       body{background-color: #ffd230;}
-      
     </style>
   </head>
   
-  <body>
+<body>
     <!-- navigation bar -->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
       <div class="container-fluid">
@@ -33,7 +32,7 @@
           <a class="nav-link" href="Cart.html">CART</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="EWallet2.html">E-WALLET</a>
+          <a class="nav-link" href="EWallet.html">E-WALLET</a>
         </li>
 
         <li class="nav-item">
@@ -42,37 +41,42 @@
         <li class="nav-item">
           <a class="nav-link" href="Login.html">LOGIN</a>
         </li>
-
         <li class="nav-item">
           <a class="nav-link" href="About.html">ABOUT</a>
         </li>
-  
         </ul>
       </div>
     </nav>
 
     <!-- content of webpage -->
-    <div class="container">
-      <div class="row" style="padding-top: 250px;">
-        <div class="col-md-12 text-center">
-          <h3>E-WALLET</h3>
-          <p style="color: green; font-size: xx-large;"><b>TOP UP SUCCESSFUL!</b></p>
+  
+    <div class="row" style="padding-left: 10px;">
+      <h3 style="padding-top: 10px;">E-WALLET</h3>
+
+      
+      <div class="container d-flex justify-content-center align-items-center" style="height: 90vh;">
+        <div class="TOPUP" style="width: 450px; padding-left: 20px;">
+          <h3 style="padding-top: 10px; padding-left: 130px; " >TOP UP WITH</h3>
+          <p style="padding-left: 160px;"><b>CREDIT CARD</b></p>  
+
+          <div class="row g-3 align-items-center">
+            <div class="col-auto" style="padding-left: 90px;">
+              <a class="VISA" href="Visa.html" role="button" style="width: 100px;"><img src="Images/th.jpg" alt="Visa" style="height: 40px; width: 120px;"></a>
+              <b>OR</b>
+              <a class="MASTER" href="Master.html" role="button" style="width: 100px; height: 50px;"><img src="Images/mastercard.jpg" alt="MASTER" style="height: 70px;"></a>
+            </div>
+            <br>
+            <div class="row" style="padding-top: 20px;">
+              <div class="col-md-6 offset-md-3 text-center">
+                <p id="balance-display" style="font-size: 30px;"><b>Balance:</b> $143</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row" style="padding-top: 20px;">
-        <div class="col-md-6 offset-md-3 text-center">
-          <p id="topup-amount-display" style="font-size: 30px;"><b>Top up amount:</b> $<span id="topup-amount"></span></p>
-          <p id="balance-display" style="font-size: 30px;"><b>Balance:</b> $<span id="balance"></span></p>
-        </div>
-      </div>
-    </div>
+      
+      
+      
+      </body>
+      </html>
 
-    <script>
-      const topupAmount = localStorage.getItem('topupAmount');
-      const balance = 93 + parseInt(topupAmount);
-
-      document.getElementById('topup-amount').innerHTML = topupAmount;
-      document.getElementById('balance').innerHTML = balance;
-    </script>
-  </body>
-</html>
